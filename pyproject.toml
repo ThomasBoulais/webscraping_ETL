@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etl-project"
+dynamic = ["version"]
+description = ""
+readme = "README.md"
+authors = [{ name = "Thomas B.", email = "thomas.tuan.boulais@gmail.com" }]
+
+dependencies = [
+    "requests",
+    "pandas",
+    "bs4",
+    "datetime",
+    "numpy",
+]
