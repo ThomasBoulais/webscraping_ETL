@@ -1,2 +1,8 @@
-.venv
-*.egg-info
+# Poetry virtual environment directory
+.poetry/
+# Cache directory
+.cache/
+# The SQLite database
+*.db 
+# Logs 
+code_log.txt
