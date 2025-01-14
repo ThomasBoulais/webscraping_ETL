@@ -1,18 +1,27 @@
-[build-system]
-requires = ["setuptools >= 61.0"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "etl-project"
-dynamic = ["version"]
-description = ""
-readme = "README.md"
-authors = [{ name = "Thomas B.", email = "thomas.tuan.boulais@gmail.com" }]
-
-dependencies = [
-    "requests",
-    "pandas",
-    "bs4",
-    "datetime",
-    "numpy",
+name = "etl-webscraping-project"
+version = "0.1.0"
+description = "A project for extracting, transforming, and loading data from the web"
+authors = [
+    {name = "Thomas B.", email = "thomas.tuan.boulais@gmail.com"}
 ]
+readme = "README.md"
+repository = "https://github.com/ThomasBoulais/turbo-spoon.git"
+requires-python = ">=3.10"
+
+[tool.poetry.dependencies]
+requests = "^2.32.3"
+pandas = "^2.2.3"
+bs4 = "^0.0.2"
+numpy = "^2.2.1"
+
+[poetry.group.dev.dependencies]
+# Add any development dependencies, like testing tools
+pytest = "^7.2.0"
+
+[build-system]
+requires = ["poetry>=1.7"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "etl_project" }]
