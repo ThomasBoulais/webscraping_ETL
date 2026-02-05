@@ -1,7 +1,7 @@
 # ETL Project: Web Scraping and Data Transformation
 
 ## Overview
-This project extracts data from a specified website using web scraping techniques, transforms it using Python scripts, and loads the cleaned and processed data into a SQLite3 database for further analysis. The process follows the ETL (Extract, Transform, Load) paradigm to efficiently handle and store the data.
+This goal of this project is to Extract, Transform, Load (ETL) data through webscraping with BS4, transform it with a python script, and load the processed data into a SQLite3 database.
 
 ## Requirements
 Before running the project, ensure you have Python 3.x installed. The project dependencies are managed through `pyproject.toml`, which is the recommended configuration for modern Python projects.
@@ -24,8 +24,8 @@ To install the dependencies, use [Poetry](https://python-poetry.org/), a depende
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/ThomasBoulais/turbo-spoon.git
-    cd turbo-spoon
+    git clone git@github.com:ThomasBoulais/webscraping_ETL.git
+    cd webscraping_ETL
     ```
 
 2. Install the dependencies with Poetry:
@@ -55,16 +55,13 @@ To install the dependencies, use [Poetry](https://python-poetry.org/), a depende
 4. **SQLite Query**: 
    - The `run_query` function allows SQL queries on the Banks.db created on SQLite3.
 
-X. **Log**: 
+5. **Log**: 
    - The `log_progress` function is called mutliple times throughout the steps to gather their status and timestamp.    
 
 ## Running the Project
 
 To run the full ETL pipeline, simply execute the following command:
 
-```bash
-poetry run python etl_pipeline.py
-
-
-In case you need the exchange_rate.csv again
-wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-PY0221EN-Coursera/labs/v2/exchange_rate.csv
+    ```bash
+    poetry run python etl_pipeline.py
+    ```
